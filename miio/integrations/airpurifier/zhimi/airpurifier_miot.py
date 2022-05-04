@@ -140,12 +140,47 @@ _MAPPING_VB4 = {
     "device-display-unit": {"siid": 14, "piid": 1},
 }
 
+# https://miot-spec.org/miot-spec-v2/instance?type=urn:miot-spec-v2:device:air-purifier:0000A007:zhimi-za1:1
+_MAPPING_ZA1 = {
+    # Air Purifier
+    "power": {"siid": 2, "piid": 1},
+    "mode": {"siid": 2, "piid": 5},
+    # Environment
+    "aqi": {"siid": 3, "piid": 1},
+    "pm25": {"siid": 3, "piid": 6},
+    "humidity": {"siid": 3, "piid": 7},
+    "temperature": {"siid": 3, "piid": 8},
+    # Filter
+    "filter_life_remaining": {"siid": 4, "piid": 3},
+    "filter_hours_used": {"siid": 4, "piid": 5},
+    # Alarm
+    "buzzer": {"siid": 5, "piid": 1},
+    # Screen
+    "led_brightness": {"siid": 6, "piid": 1},
+    # Physical Control Locked
+    "child_lock": {"siid": 7, "piid": 1},
+    # Motor Speed (siid=10)
+    "favorite_level": {"siid": 10, "piid": 10},
+    "motor_speed": {"siid": 10, "piid": 11},
+    # Use time (siid=12)
+    "use_time": {"siid": 12, "piid": 1},
+    # AQI (siid=13)
+    "purify_volume": {"siid": 13, "piid": 1},
+    "average_aqi": {"siid": 13, "piid": 2},
+    # RFID (siid=14)
+    "filter_rfid_tag": {"siid": 14, "piid": 1},
+    "filter_rfid_product_id": {"siid": 14, "piid": 3},
+    # custom-service
+    "gesture_status": {"siid": 15, "piid": 13}
+}
+
 _MAPPINGS = {
     "zhimi.airpurifier.ma4": _MAPPING,  # airpurifier 3
     "zhimi.airpurifier.mb3": _MAPPING,  # airpurifier 3h
     "zhimi.airpurifier.va1": _MAPPING,  # airpurifier proh
     "zhimi.airpurifier.vb2": _MAPPING,  # airpurifier proh
     "zhimi.airpurifier.mb4": _MAPPING_MB4,  # airpurifier 3c
+    "zhimi.airpurifier.za1": _MAPPING_ZA1,  # airpurifier za1
     "zhimi.airp.mb4a": _MAPPING_MB4,  # airpurifier 3c
     "zhimi.airp.mb5": _MAPPING_VA2,  # airpurifier 4
     "zhimi.airp.va2": _MAPPING_VA2,  # airpurifier 4 pro
